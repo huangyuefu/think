@@ -1,0 +1,132 @@
+{include file='public/header'}
+<div class="centBox">
+    <div class="banner">
+        <div class="banL">
+            <div class="yuyue">
+                {volist name="Recommend" id="vo"}
+                <p><a href="#"><img src="{$vo.image_path}" width="232" height="213" alt="" />
+                    {$vo.name}</a></p>
+                {/volist}
+                <p><a href="#" class="yuyue_a"></a></p>
+            </div>
+        </div>
+        <div class="banR">
+            <div class="banR_pt">
+                <div class="slider">
+                    <ul class="slider-main">
+                        {volist name="banner" id="vo"}
+                        <li class="slider-panel">
+                            <a href="http://www.jb51.net" target="_blank"><img  src="{$vo.image_path}"></a>
+                        </li>
+                        {/volist}
+                    </ul>
+                    <div class="slider-extra">
+                        <ul class="slider-nav">
+                            {volist name="banner" id="vo"}
+                            <li class="slider-item"></li>
+                            {/volist}
+                        </ul>
+                        <div class="slider-page">
+                            <a class="slider-pre" href="javascript:;;"><</a>
+                            <a class="slider-next" href="javascript:;;">></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mian">
+        <div class="mianL">
+            <div class="mianTop">
+                <span class="mianT_span">特产一览│SPECIALTIES LIST</span>
+                <a href="#">更多&gt;&gt;</a>
+            </div>
+            <div class="mianText">
+                <ul>
+                    {volist name="Specialty" id="vo"}
+                    <li>
+                        <p><a href="{:url('index/index/product',['id'=>$vo.id])}"><img src="{$vo.image_path}" width="208" height="177" alt="" />{$vo.name}</a></p>
+                        <p><a href="{:url('index/index/product',['id'=>$vo.id])}" class="yuyue_a"></a></p>
+                    </li>
+                    {/volist}
+                </ul>
+            </div>
+        </div>
+        <div class="mianR">
+            <div class="hezuo">
+                <div class="hezuo_top">推荐合作单位</div>
+                <div class="hezuo_text">
+                    <ul>
+                        {volist name="cooperation" id="vo"}
+                        <li><a href="#"><img src="{$vo.image_path}" width="206" height="60" alt="" /></a></li>
+                        {/volist}
+                    </ul>
+                </div>
+            </div>
+            <div class="hezAd">
+                {volist name="Advertisement" id="vo"}
+                <img src="{$vo.image_path}" />
+                {/volist}
+                <a href="#" class="hezL01"></a>
+                <a href="#" class="hezL02"></a>
+            </div>
+        </div>
+    </div>
+    <div class="mian3">
+        <div class="mian3_top">
+            <span class="mianT_span">资讯& 商机│IT & BUSINESS</span>
+        </div>
+        <div class="mian3_text">
+            <div class="gonggao">
+                <div class="gonggao_top">最新交易公告</div>
+                <div class="gonggao_text">
+                    <ul>
+                        {volist name="transaction" id="vo"}
+                        <li><a href="#">{$vo.title}</a></li>
+                        {/volist}
+                    </ul>
+                </div>
+            </div>
+            <div class="xiangx">
+                <div class="xiangx_top">
+                    <a href="#" class="r">更多&gt;&gt;</a>
+                    <span class="xian_span">最新信息</span>
+                </div>
+                <div class="xiangx_text">
+                    <div class="xian_img">
+                        {volist name="messageI" id="vo"}
+                        <a href="#"><img src="{$vo.image_path}" width="139" height="112" alt="" /></a>                    </div>
+                        {/volist}
+                    <div class="xianWZ">
+                        <ul>
+                            {volist name="messageA" id="vo"}
+                            <li><a href="#">{$vo.title}</a></li>
+                            {/volist}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="xiangx">
+                <div class="xiangx_top">
+                    <a href="#" class="r">更多&gt;&gt;</a>
+                    <span class="xian_span">行业快讯</span>
+                </div>
+                <div class="xiangx_text">
+                    <div class="xian_img">
+                        {volist name="newflashI" id="vo"}
+                        <a href="#"><img src="{$vo.image_path}" width="139" height="112" alt="" /></a>                    </div>
+                        {/volist}
+                    <div class="xianWZ">
+                        <ul>
+                            {volist name="newflashA" id="vo"}
+                            <li><a href="#">{$vo.title}</a></li>
+                            {/volist}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{include file='public/footer'}

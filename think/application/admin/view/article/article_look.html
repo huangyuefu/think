@@ -1,0 +1,13 @@
+{include file="public/header" /}
+
+<div id="container" style="margin:50px 400px;">
+
+    <h4 style="margin:50px;">{$result['title']}</h4>
+    <p>
+        <span>来源:{$result['sources']}</span>
+    </p>
+    <div id="content">
+        {$result['content']}
+    </div>
+</div>
+{include file="public/footer" /}

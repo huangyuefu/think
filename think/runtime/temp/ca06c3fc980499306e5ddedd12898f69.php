@@ -1,0 +1,2 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:74:"E:\000rj\www\WWW\think\public/../application/admin\view\index\lookmap.html";i:1497786228;}*/ ?>
+<img  src="<?php echo url('admin/index/map'); ?>"/>;
